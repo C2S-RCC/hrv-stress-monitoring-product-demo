@@ -28,14 +28,14 @@ export type MetricDatum = {
 };
 
 export const currentMetrics = {
-  heartRate: 86,
+  heartRate: 82,
   rmssd: 28,
-  sdnn: 41,
+  sdnn: 42,
   lfHf: 2.4,
-  stressLevel: 'High' as StressLevel,
-  stressLevelText: '压力偏高',
+  stressLevel: 'Medium' as StressLevel,
+  stressLevelText: '压力中等',
   emotionState: '紧张 / 注意力负荷较高',
-  stressScore: 72,
+  stressScore: 58,
 };
 
 export const metricCards: MetricDatum[] = [
@@ -43,7 +43,7 @@ export const metricCards: MetricDatum[] = [
     label: '当前心率',
     value: currentMetrics.heartRate,
     unit: 'bpm',
-    helper: '较静息基线升高',
+    helper: '较静息基线略有升高',
   },
   {
     label: 'RMSSD',
@@ -73,7 +73,7 @@ export const trendData: TrendDatum[] = [
   { day: 'D-3', heartRate: 79, hrv: 43, stressIndex: 50 },
   { day: 'D-2', heartRate: 82, hrv: 37, stressIndex: 61 },
   { day: 'D-1', heartRate: 85, hrv: 32, stressIndex: 69 },
-  { day: '今日', heartRate: 86, hrv: 28, stressIndex: 72 },
+  { day: '今日', heartRate: 82, hrv: 28, stressIndex: 58 },
 ];
 
 export const feedbackReasons = [
@@ -90,7 +90,7 @@ export const initialFeedbackRecords: FeedbackRecord[] = [
     id: 'FB-1024',
     userId: 'U-2026-017',
     time: '2026-05-11 09:18',
-    aiPrediction: '压力偏高',
+    aiPrediction: '压力中等',
     userFeedback: '准确',
     reason: '睡眠不足',
     inSamplePool: true,
