@@ -226,7 +226,6 @@ export function HospitalECGMonitor({ compact = false, showTitle = true }: Hospit
       )}
       <div className="grid gap-4 lg:grid-cols-[1.55fr_0.65fr]">
         <div>
-          <p className="mb-2 text-sm font-medium text-ink-700">医院监护仪风格ECG波形</p>
           <MonitorScreen />
         </div>
         <VitalSummaryCard />
